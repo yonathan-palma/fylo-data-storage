@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--VeryDarkBlue);
+    background-image:  url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom right;
+    display: grid;
+    place-items: center;
+}
+.container{
+    display: flex;
+    gap: 2rem;
+    max-width: 100vw;
+}
+.section_icon{
+    background-color: var(--DarkBlue);
+    border-radius: 1rem 5rem 1rem 1rem;
+    padding: 2rem;
+    width: 250px;
+    display: grid;
+    gap: 2rem;
+}
+.section_icon .icons{
+    display: flex;
+    gap: 1rem;
+}
+.section_icon .icons .btn_icon{
+    background-color: var(--VeryDarkBlue);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.section_load{
+    background-color: var(--DarkBlue);
+    width: 400px;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: var(--PaleBlue);
+    height: 80%;
+    align-self: flex-end;
+    display: grid;
+    
+}
+.section_load span{
+    font-weight: 700;
+}
+.section_load .progress_bar{
+    background-color: var(--VeryDarkBlue);
+    border-radius: 1rem;
+    width: 100%;
+    height: 1rem;
+    padding: 2px;
+    margin: 1rem 0 .5rem 0;
+    position: relative;
+}
+.section_load .progress_bar .progress{
+    background-image: linear-gradient( to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 1rem;
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+.progress::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--PaleBlue);
+    border-radius: 50%;
+    right: 2px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.section_load .info_load{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+.toolti{
+    position: absolute;
+    color: var(--VeryDarkBlue);
+    font-size: 28px;
+    font-weight: 700;
+    right: 0;
+    top: -7rem;
+}
+.toolti .popover{
+    background-color: var(--PaleBlue);
+    border-radius: 1rem 1rem 0 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.toolti .popover span{
+    color: var(--GrayishBlue);
+    font-size: 10px;
+}
+.triangle{
+    background-color: var(--PaleBlue);
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(0 0,100% 0,100%100%);
+    float: right;
+    
+}
+
+@media (max-width:425px) {
+    body{
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .section_icon,.section_load{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .section_load p{
+        text-align: center;
+    }
+    .toolti{
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 3rem;
+        width: 150px;
+    }
+    .toolti .popover{
+        border-radius: 1rem;
+    }
+    .triangle{
+        display: none;
+    }
+    
+}

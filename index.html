@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fylo Data Storage</title>
+</head>
+<body>
+    <div role="main" class="container">
+        <div class="section_icon">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+            <div class="icons">
+                <label for="file"><img src="images/icon-document.svg" alt="" class="btn_icon"></label>
+                <input type="file" name="file" id="file"class="btn_icon">
+                <button type="button" class="btn_icon">
+                    <img src="images/icon-document.svg" alt="">
+                </button>
+                <button type="button" class="btn_icon">
+                    <img src="images/icon-folder.svg" alt="">
+                </button>
+                <button type="button" class="btn_icon">
+                    <img src="images/icon-upload.svg" alt="">
+                </button>
+            </div>         
+        </div>
+        <div class="section_load">
+            <p>You've used <span>815GB</span>of your storage</p>
+            <div class="progress_bar">
+                <div class="progress"></div>
+                <div class="toolti">
+                    <div class="popover">
+                        <p>185</p>   
+                        <span>  GB LEFT</span>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+            <div class="info_load">
+                <p>0 GB</p>
+                <p>1000 GB</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
