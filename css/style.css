@@ -52,6 +52,9 @@ body{
     height: 45px;
     cursor: pointer;
 }
+.btn_icon:hover{
+    transform: scale(1.1);
+}
 .section_load{
     background-color: var(--DarkBlue);
     width: 400px;
@@ -126,6 +129,48 @@ body{
     clip-path: polygon(0 0,100% 0,100%100%);
     float: right;
     
+}
+.btn_file::before{
+    content: url(../images/icon-document.svg);
+    width: 45px;
+    height: 45px;
+    background-color: var(--VeryDarkBlue);
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+.btn_file:hover{
+    transform: scale(1.1);
+}
+.container_progress{
+    width: 300px;
+    height: auto;
+    background-color: var(--PaleBlue);
+    border-radius: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    gap: .5rem;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+.progressBar{
+    height: 10px;
+    width: 100%;
+    background-color: var(--GrayishBlue);
+    border-radius: 5px;
+    padding: 2px;
+}
+.progressLoad{
+    height: 100%;
+    background-image: linear-gradient( to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 5px;
+    width: 0;
 }
 
 @media (max-width:425px) {
